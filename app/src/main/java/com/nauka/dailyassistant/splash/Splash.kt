@@ -5,13 +5,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Environment
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.dcastalia.localappupdate.DownloadApk
 import com.nauka.dailyassistant.R
 import com.nauka.dailyassistant.databinding.ActivitySplashBinding
 import com.nauka.dailyassistant.fragments.*
@@ -34,13 +34,21 @@ class Splash : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), REQUEST_CODE_ASK_PERMISSIONS_CALL)
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                REQUEST_CODE_ASK_PERMISSIONS_CALL
+            )
         }else {
             write()
         }
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), REQUEST_CODE_ASK_PERMISSIONS_CALL)
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                REQUEST_CODE_ASK_PERMISSIONS_CALL
+            )
         }else {
             write()
         }
@@ -53,6 +61,12 @@ class Splash : AppCompatActivity() {
         val model: SplashViewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
         /** Привязываем вьюмодель к биндеру*/
         binding.splashViewModel = model
+
+        val url = "https://github.com/RustamPlanirovich/DailyAssistant/tree/master/app/release/app-release.apk"
+
+        val downloadApk = DownloadApk(this)
+
+        downloadApk.startDownloadingApk(url)
 
         /** запускаем новую корутину в основном потоке и после задержки в 3 секунды
          * запускаем ключаем видимость Fragments*/
@@ -67,7 +81,11 @@ class Splash : AppCompatActivity() {
 
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
         when (requestCode) {
             REQUEST_CODE_ASK_PERMISSIONS_CALL -> if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 write()
