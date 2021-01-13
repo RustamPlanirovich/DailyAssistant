@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "847143260482",
+    "project_id": "daily-92613",
+    "storage_bucket": "daily-92613.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847143260482:android:2a04919d6ea2ca9409f8db",
+        "android_client_info": {
+          "package_name": "com.nauka.dailyassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847143260482-n1n0t0dqlaiqc4mkm0utp1teifqbaba2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqqg142bupoiwjBpiFxiZ7QSE74_Noyls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847143260482-n1n0t0dqlaiqc4mkm0utp1teifqbaba2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
