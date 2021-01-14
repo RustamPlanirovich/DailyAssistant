@@ -1,6 +1,6 @@
 {
-  "latestVersion": "1.1",
-  "latestVersionCode": 11,
+  "latestVersion": "1.2",
+  "latestVersionCode": 2,
   "url": "https://github.com/RustamPlanirovich/DailyAssistant/tree/master/app/release",
   "releaseNotes": [
     "- First evolution",
