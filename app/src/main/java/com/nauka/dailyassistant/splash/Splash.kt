@@ -63,6 +63,7 @@ class Splash : AppCompatActivity() {
         binding.splashViewModel = model
 
         val url = "https://github.com/RustamPlanirovich/DailyAssistant/tree/master/app/release/app-release.apk"
+        "https://github.com/RustamPlanirovich/DailyAssistant/raw/master/app-debug.apk"
 
         val downloadApk = DownloadApk(this)
 

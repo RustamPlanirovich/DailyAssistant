@@ -80,4 +80,5 @@ dependencies {
     implementation 'com.eightbitlab:blurview:1.6.5'
     //AutoUpdate
     implementation 'com.github.Piashsarker:AndroidAppUpdateLibrary:1.0.3'
+
 }
