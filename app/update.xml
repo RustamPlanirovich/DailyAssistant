@@ -3,6 +3,6 @@
     <latestVersion>1.0.2</latestVersion>
     <latestVersionCode>3</latestVersionCode>
     <url>https://github.com/RustamPlanirovich/Assistant/releases</url>
-    <releasNotes>Hello</releasNotes>
+    <releaseNotes>Hello</releaseNotes>
   </update>
 </AppUpdater>
