@@ -1,6 +1,6 @@
 <AppUpdater>
   <update>
-    <latestVersion>1.0.1</latestVersion>
+    <latestVersion>1.0.2</latestVersion>
     <latestVersionCode>2</latestVersionCode>
     <url>https://github.com/RustamPlanirovich/DailyAssistant/tree/v1.0.2/app/release/app-release.apk
 </url>
