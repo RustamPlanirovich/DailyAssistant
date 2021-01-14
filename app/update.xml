@@ -1,7 +1,7 @@
 <AppUpdater>
   <update>
     <latestVersion>1.0.1</latestVersion>
-    <latestVersionCode>11</latestVersionCode>
+    <latestVersionCode>1</latestVersionCode>
     <url>https://github.com/RustamPlanirovich/Assistant/releases</url>
   </update>
 </AppUpdater>
