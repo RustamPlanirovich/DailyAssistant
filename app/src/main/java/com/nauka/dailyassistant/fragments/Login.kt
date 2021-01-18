@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.nauka.dailyassistant.R
 import com.nauka.dailyassistant.databinding.FragmentLoginBinding
+import com.nauka.dailyassistant.ui.MainActivity
 import com.nauka.dailyassistant.viewModels.LoginViewModel
 
 
@@ -33,7 +34,17 @@ class Login : Fragment() {
         binding.loginViewModel = model
         binding.lifecycleOwner = viewLifecycleOwner
 
+
+
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        binding.sendButton.setOnClickListener {
+
+        }
+
     }
 
 }

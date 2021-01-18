@@ -7,31 +7,26 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.inappmessaging.FirebaseInAppMessaging
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.messaging.ktx.messaging
-import com.google.firebase.messaging.FirebaseMessaging
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-
 import com.nauka.dailyassistant.R
 import com.nauka.dailyassistant.databinding.ActivityMainBinding
 import com.nauka.dailyassistant.fragments.*
 import com.nauka.dailyassistant.util.CurrentTime
-import com.nauka.dailyassistant.util.ForceUpdateChecker
 import com.nauka.dailyassistant.util.ForceUpdateChecker.OnUpdateNeededListener
 import com.nauka.dailyassistant.viewModels.MainActivityViewModel
 
@@ -40,8 +35,8 @@ private const val NUM_PAGES = 6
 
 class MainActivity : AppCompatActivity(), OnUpdateNeededListener {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var navController: NavController
+    lateinit var binding: ActivityMainBinding
+    lateinit var navController: NavController
     private lateinit var model: MainActivityViewModel
     lateinit var context: Context
 
@@ -65,7 +60,10 @@ class MainActivity : AppCompatActivity(), OnUpdateNeededListener {
 
         }
 
-        ForceUpdateChecker().with(this)?.onUpdateNeeded(this)?.check()
+        /**Проверка новой версии с помощью Firebase Remote Config
+       *обслуживаеющий классы: ForceUpdateChecker и App*/
+        //ForceUpdateChecker().with(this)?.onUpdateNeeded(this)?.check()
+
 
         val pagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager)
         binding.pager.adapter = pagerAdapter
@@ -131,6 +129,5 @@ class MainActivity : AppCompatActivity(), OnUpdateNeededListener {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }
-
 
 }

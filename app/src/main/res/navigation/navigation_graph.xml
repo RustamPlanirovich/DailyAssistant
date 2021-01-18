@@ -5,29 +5,30 @@
     android:id="@+id/navigation_graph"
     app:startDestination="@id/programmingMusic">
     <fragment
-        android:id="@+id/notificationList"
-        android:name="com.nauka.dailyassistant.fragments.NotificationList"
-        android:label="fragment_notification_list"
-        tools:layout="@layout/fragment_notification_list" >
-        <action
-            android:id="@+id/action_notificationList_to_smsList"
-            app:destination="@id/smsList" />
-    </fragment>
-    <fragment
 
         android:id="@+id/programmingMusic"
         android:name="com.nauka.dailyassistant.fragments.ProgrammingMusic"
         android:label="fragment_programming_music"
-        tools:layout="@layout/fragment_programming_music" >
+        tools:layout="@layout/fragment_programming_music">
         <action
             android:id="@+id/action_programmingMusic_to_notificationList2"
             app:destination="@id/notificationList" />
     </fragment>
     <fragment
+        android:id="@+id/notificationList"
+        android:name="com.nauka.dailyassistant.fragments.NotificationList"
+        android:label="fragment_notification_list"
+        tools:layout="@layout/fragment_notification_list">
+        <action
+            android:id="@+id/action_notificationList_to_smsList"
+            app:destination="@id/smsList" />
+    </fragment>
+
+    <fragment
         android:id="@+id/smsList"
         android:name="com.nauka.dailyassistant.fragments.SmsList"
         android:label="fragment_sms_list"
-        tools:layout="@layout/fragment_sms_list" >
+        tools:layout="@layout/fragment_sms_list">
         <action
             android:id="@+id/action_smsList_to_callsList"
             app:destination="@id/callsList" />
@@ -37,7 +38,7 @@
         android:id="@+id/callsList"
         android:name="com.nauka.dailyassistant.fragments.CallsList"
         android:label="fragment_calls_list"
-        tools:layout="@layout/fragment_calls_list" >
+        tools:layout="@layout/fragment_calls_list">
         <action
             android:id="@+id/action_callsList_to_links2"
             app:destination="@id/links" />
@@ -46,14 +47,15 @@
         android:id="@+id/links"
         android:name="com.nauka.dailyassistant.fragments.Links"
         android:label="fragment_links"
-        tools:layout="@layout/fragment_links" >
+        tools:layout="@layout/fragment_links">
         <action
-            android:id="@+id/action_links_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_links_to_profileFragment3"
+            app:destination="@id/profileFragment3" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profileFragment3"
         android:name="com.nauka.dailyassistant.fragments.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
 </navigation>

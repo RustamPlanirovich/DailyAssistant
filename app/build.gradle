@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.firebase-perf'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -61,9 +62,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.2.0')
     implementation 'com.google.firebase:firebase-messaging'
     implementation "com.google.firebase:firebase-messaging-ktx:21.0.1"
-    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-analytics:18.0.1'
     implementation 'androidx.work:work-runtime:2.4.0'
-    implementation 'com.google.firebase:firebase-perf:19.0.11'
+    implementation 'com.google.firebase:firebase-perf:19.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -90,5 +92,9 @@ dependencies {
     implementation 'com.eukaprotech.xmlprocessor:xmlprocessor:1.0.0@aar'
     //Blur
     implementation 'com.eightbitlab:blurview:1.6.5'
+
+    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
+
 
 }

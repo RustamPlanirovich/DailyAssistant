@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.nauka.dailyassistant.fragments.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login_to_verifiSmsCode"
+            app:destination="@id/verifiSmsCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifiSmsCode"
+        android:name="com.nauka.dailyassistant.fragments.VerifiSmsCode"
+        android:label="fragment_verifi_sms_code"
+        tools:layout="@layout/fragment_verifi_sms_code" />
+</navigation>
