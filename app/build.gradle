@@ -19,7 +19,6 @@ android {
         versionName "1.0.0"
 
 
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         renderscriptTargetApi 28 //must match target sdk and build tools
         renderscriptSupportModeEnabled true
@@ -95,6 +94,8 @@ dependencies {
 
     implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
+    //AnimatedBottomBar
+    implementation 'nl.joery.animatedbottombar:library:1.0.9'
 
 
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/programmingMusic">
+    app:startDestination="@id/links">
     <fragment
 
         android:id="@+id/programmingMusic"
@@ -51,11 +51,25 @@
         <action
             android:id="@+id/action_links_to_profileFragment3"
             app:destination="@id/profileFragment3" />
+        <action
+            android:id="@+id/action_links_to_login2"
+            app:destination="@id/login2" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment3"
         android:name="com.nauka.dailyassistant.fragments.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.nauka.dailyassistant.fragments.Login"
+        tools:layout="@layout/fragment_login"
+        android:label="Login" />
+    <fragment
+        android:id="@+id/verifiSmsCode2"
+        android:name="com.nauka.dailyassistant.fragments.VerifiSmsCode"
+        android:label="fragment_verifi_sms_code"
+        tools:layout="@layout/fragment_verifi_sms_code" />
 
 </navigation>
