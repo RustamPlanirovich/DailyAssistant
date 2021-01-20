@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.nauka.dailyassistant.R
 import com.nauka.dailyassistant.databinding.FragmentLoginBinding
 import com.nauka.dailyassistant.ui.MainActivity
@@ -42,7 +43,7 @@ class Login : Fragment() {
     override fun onStart() {
         super.onStart()
         binding.sendButton.setOnClickListener {
-
+            findNavController().navigate(R.id.action_global_verifiSmsCode3)
         }
 
     }

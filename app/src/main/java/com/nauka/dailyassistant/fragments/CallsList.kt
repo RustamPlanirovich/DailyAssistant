@@ -19,6 +19,8 @@ import com.nauka.dailyassistant.adapters.CallAdapter
 import com.nauka.dailyassistant.databinding.FragmentCallsListBinding
 import com.nauka.dailyassistant.ui.MainActivity
 import com.nauka.dailyassistant.viewModels.CallListViewModel
+import eightbitlab.com.blurview.BlurView
+import eightbitlab.com.blurview.RenderScriptBlur
 
 
 class CallsList : Fragment() {
@@ -26,6 +28,7 @@ class CallsList : Fragment() {
     private lateinit var model: CallListViewModel
     private lateinit var binding: FragmentCallsListBinding
     private val REQUEST_CODE_ASK_PERMISSIONS_CALL = 124
+    lateinit var blurView: BlurView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -85,6 +88,7 @@ class CallsList : Fragment() {
 
         return binding.root
     }
+
 
 
 }

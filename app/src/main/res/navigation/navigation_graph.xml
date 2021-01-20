@@ -3,59 +3,127 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/programmingMusic">
+    app:startDestination="@id/homeFragment">
     <fragment
 
         android:id="@+id/programmingMusic"
         android:name="com.nauka.dailyassistant.fragments.ProgrammingMusic"
         android:label="fragment_programming_music"
-        tools:layout="@layout/fragment_programming_music">
-        <action
-            android:id="@+id/action_programmingMusic_to_notificationList2"
-            app:destination="@id/notificationList" />
-    </fragment>
+        tools:layout="@layout/fragment_programming_music"/>
     <fragment
         android:id="@+id/notificationList"
         android:name="com.nauka.dailyassistant.fragments.NotificationList"
         android:label="fragment_notification_list"
-        tools:layout="@layout/fragment_notification_list">
-        <action
-            android:id="@+id/action_notificationList_to_smsList"
-            app:destination="@id/smsList" />
-    </fragment>
+        tools:layout="@layout/fragment_notification_list"/>
 
     <fragment
         android:id="@+id/smsList"
         android:name="com.nauka.dailyassistant.fragments.SmsList"
         android:label="fragment_sms_list"
-        tools:layout="@layout/fragment_sms_list">
-        <action
-            android:id="@+id/action_smsList_to_callsList"
-            app:destination="@id/callsList" />
-    </fragment>
+        tools:layout="@layout/fragment_sms_list"/>
 
     <fragment
         android:id="@+id/callsList"
         android:name="com.nauka.dailyassistant.fragments.CallsList"
         android:label="fragment_calls_list"
-        tools:layout="@layout/fragment_calls_list">
-        <action
-            android:id="@+id/action_callsList_to_links2"
-            app:destination="@id/links" />
-    </fragment>
+        tools:layout="@layout/fragment_calls_list"/>
     <fragment
         android:id="@+id/links"
         android:name="com.nauka.dailyassistant.fragments.Links"
         android:label="fragment_links"
-        tools:layout="@layout/fragment_links">
-        <action
-            android:id="@+id/action_links_to_profileFragment3"
-            app:destination="@id/profileFragment3" />
-    </fragment>
+        tools:layout="@layout/fragment_links"/>
     <fragment
         android:id="@+id/profileFragment3"
         android:name="com.nauka.dailyassistant.fragments.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/verifiSmsCode3"
+        android:name="com.nauka.dailyassistant.fragments.VerifiSmsCode"
+        android:label="fragment_verifi_sms_code"
+        tools:layout="@layout/fragment_verifi_sms_code" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nauka.dailyassistant.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.nauka.dailyassistant.fragments.Login"
+        tools:layout="@layout/fragment_login"
+        android:label="Login" />
+    <fragment
+        android:id="@+id/callFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.CallFragment"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_call" />
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.GeneralFragment"
+        android:label="fragment_general"
+        tools:layout="@layout/fragment_general" />
+    <fragment
+        android:id="@+id/linksFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.LinksFragment"
+        android:label="fragment_links2"
+        tools:layout="@layout/fragment_links2" />
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/plansFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.PlansFragment"
+        android:label="fragment_plans"
+        tools:layout="@layout/fragment_plans" />
+    <fragment
+        android:id="@+id/purchasesFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.PurchasesFragment"
+        android:label="fragment_purchases"
+        tools:layout="@layout/fragment_purchases" />
+    <fragment
+        android:id="@+id/profileSFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.ProfileSFragment"
+        android:label="fragment_profile2"
+        tools:layout="@layout/fragment_profile2" />
+    <fragment
+        android:id="@+id/smsFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.SmsFragment"
+        android:label="fragment_sms"
+        tools:layout="@layout/fragment_sms" />
+    <fragment
+        android:id="@+id/thoughtsFragment"
+        android:name="com.nauka.dailyassistant.fragments.titleFragments.ThoughtsFragment"
+        android:label="fragment_thoughts"
+        tools:layout="@layout/fragment_thoughts" />
+    <action android:id="@+id/action_global_callsList" app:destination="@id/callsList" />
+    <action android:id="@+id/action_global_programmingMusic" app:destination="@id/programmingMusic" />
+    <action android:id="@+id/action_global_generalFragment" app:destination="@id/generalFragment" />
+    <action android:id="@+id/action_global_callFragment" app:destination="@id/callFragment" />
+    <action android:id="@+id/action_global_linksFragment" app:destination="@id/linksFragment" />
+    <action android:id="@+id/action_global_links" app:destination="@id/links" />
+    <action android:id="@+id/action_global_musicFragment" app:destination="@id/musicFragment" />
+    <action android:id="@+id/action_global_notificationFragment" app:destination="@id/notificationFragment" />
+    <action android:id="@+id/action_global_notificationList" app:destination="@id/notificationList" />
+    <action android:id="@+id/action_global_plansFragment" app:destination="@id/plansFragment" />
+    <action android:id="@+id/action_global_profileSFragment" app:destination="@id/profileSFragment" />
+    <action android:id="@+id/action_global_profileFragment3" app:destination="@id/profileFragment3" />
+    <action android:id="@+id/action_global_login" app:destination="@id/login" />
+    <action android:id="@+id/action_global_verifiSmsCode3" app:destination="@id/verifiSmsCode3" />
+    <action android:id="@+id/action_global_purchasesFragment" app:destination="@id/purchasesFragment" />
+    <action android:id="@+id/action_global_smsFragment" app:destination="@id/smsFragment" />
+    <action android:id="@+id/action_global_smsList" app:destination="@id/smsList" />
+    <action android:id="@+id/action_global_thoughtsFragment" app:destination="@id/thoughtsFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.nauka.dailyassistant.ui.MainActivity"
+        tools:layout="@layout/activity_main"
+        android:label="MainActivity" />
 
 </navigation>
